@@ -1,6 +1,7 @@
 $.fn.extend({
     autocomplete(_setting) {
-        this.setting ={
+        this.setting = {
+            zIndex: 1000,
             minLength: 3,
             maxHeight: 300,
             placeholder: ["Chọn 1 giá trị", "Nhập gì đó để tìm kiếm..."],
@@ -32,7 +33,7 @@ $.fn.extend({
                             "title": text,
                             "class": "dropdown-item"
                         })
-                        .append($("<span>").text(text), $('<button>&times;</button>'));
+                        .append($("<span>").text(text), $('<button type="button">&times;</button>'));
                 dropdownContent.append(ele);
             });
             if (optionEles.length == 0) {
@@ -51,7 +52,7 @@ $.fn.extend({
         var selectEles = this;
         var htmlInput = `<div class="bs4-dropdown-container position-relative">
                             <button class="form-control text-left bs4-dropdown" data-toggle="dropdown">${this.setting.placeholder[0]}</button>
-                            <div class="dropdown-menu w-100">
+                            <div class="dropdown-menu w-100" style="z-index:${this.setting.zIndex}">
                                 <div class="px-3 mb-2">
                                     <input type="search" class="form-control" placeholder="${this.setting.placeholder[1]}" />
                                 </div>
