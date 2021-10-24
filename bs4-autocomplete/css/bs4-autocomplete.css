@@ -25,10 +25,29 @@ button.form-control.bs4-dropdown::after {
     overflow: auto;
 }
 .dropdown-content > .dropdown-item{
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown-content > .dropdown-item > span{
     white-space: nowrap;
     word-break: keep-all;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+.dropdown-content > .dropdown-item > button{
+    background-color: transparent;
+    margin-right: -15px;
+    font-weight: 500;
+    height: 100%;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    outline: none;
+    border:none;
+    display: none;
+}
+.dropdown-content > .dropdown-item.active > button{
+    display: inline-block;
+    color: inherit;
 }
 /* Custom scrollbar */
 .dropdown-content::-webkit-scrollbar {

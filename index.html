@@ -15,7 +15,7 @@
         <div class="row mt-5">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="s1">Chọn em đi</label>
+                    <label for="s1">Thẻ select với nội dung có sẵn</label>
                     <select id="s1" class="form-control bs4-ac" name="">
                         <option value="1">Cá không ăn muối cá ươn, con cãi cha mẹ trăm đường con hư</option>
                         <option value="2">Một con vịt xòe ra 2 cái cánh</option>
@@ -24,23 +24,35 @@
                         <option value="5">Không làm mà đòi có ăn thì ăn ..., ăn ...</option>
                         <option value="6">Sóng bắt đầu từ gió, gió bắt đầu từ đâu</option>
                         <option value="7">Demacia!</option>
+                        <option value="8">Demacia!!</option>
+                        <option value="9">Demacia!!!</option>
+                        <option value="10">Demacia!!!!</option>
+                        <option value="11">Demacia!!!!!</option>
                     </select>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="s2">Chọn em đi</label>
+                    <label for="s2">Thẻ rỗng</label>
                     <select id="s2" class="form-control bs4-ac" name="">
                     </select>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="s3">Chọn em đi</label>
+                    <label for="s3">Giá trị được chọn sẵn</label>
                     <select id="s3" class="form-control bs4-ac" name="">
-                        <option value="1">ABC</option>
-                        <option value="2">DEF</option>
-                        <option value="3">XYZ</option>
+                        <option value="1">Cá không ăn muối cá ươn, con cãi cha mẹ trăm đường con hư</option>
+                        <option value="2">Một con vịt xòe ra 2 cái cánh</option>
+                        <option value="3" selected>Rắn là loài bò sát không chân</option>
+                        <option value="4">Chim khôn kêu tiếng rảnh rang, người khôn nói tiếng dịu dàng dễ nghe</option>
+                        <option value="5">Không làm mà đòi có ăn thì ăn ..., ăn ...</option>
+                        <option value="6">Sóng bắt đầu từ gió, gió bắt đầu từ đâu</option>
+                        <option value="7">Demacia!</option>
+                        <option value="8">Demacia!!</option>
+                        <option value="9">Demacia!!!</option>
+                        <option value="10">Demacia!!!!</option>
+                        <option value="11">Demacia!!!!!</option>
                     </select>
                 </div>
             </div>
@@ -57,6 +69,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="bs4-autocomplete/js/bs4-autocomplete.js"></script>
+
+    <script>
+        $("#s3").autocomplete({
+            url: '',
+            maxHeight: 100
+        });
+        $("#s1,#s2").autocomplete({
+            url: '',
+            maxHeight: 200
+        });
+    </script>
 </body>
 
 </html>
